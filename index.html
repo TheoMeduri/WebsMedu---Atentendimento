@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebsMedu - Atendimento</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Atendimento WebsMedu</h1>
+
+    <!-- Pesquisa e Seleção de Clientes -->
+    <div class="custom-select">
+      <input type="text" id="searchInput" placeholder="Pesquisar cliente...">
+      <div id="optionsContainer" class="options-container"></div>
+    </div>
+
+    <!-- Botão de Continuar -->
+    <button id="continueButton" disabled>Continuar</button>
+
+    <!-- Formulário de Atendimento -->
+    <form id="infoForm" class="hidden">
+      <!-- Pergunta 1 -->
+      <label for="tipoSite">Qual o tipo de site?</label>
+      <br>
+      <select id="tipoSite" name="tipoSite" required>
+        <option value="institucional">Site Empresarial</option>
+        <option value="sistema">Sistema</option>
+        <option value="sistema-escolar">Sistema Escolar</option>
+        <option value="landingpage">Landing Page</option>
+        <option value="full-website">Full WebSite</option>
+        <option value="ecommerce">E-commerce</option>
+        <option value="blog">Blog</option>
+        <option value="portfolio">Portfólio</option>
+      </select>
+
+      <!-- Pergunta 2 -->
+      <label>Escolha a hospedagem:</label>
+      <br>
+      <div class="hospedagem-container">
+        <div class="hospedagem-box" data-value="websmedu">
+          <div class="hospedagem-price">R$76,90/mês</div>
+          <div class="hospedagem-name">Hospedagem WebsMedu</div>
+        </div>
+        <div class="hospedagem-box" data-value="externa">
+          <div class="hospedagem-price">R$94,00/mês</div>
+          <div class="hospedagem-name">Hospedagem Externa</div>
+        </div>
+      </div>
+      <input type="hidden" id="hospedagem" name="hospedagem" required>
+
+      <!-- Pergunta 4 -->
+      <label for="observacoes">Observações adicionais:</label>
+      <br>
+      <textarea id="observacoes" name="observacoes" rows="4" placeholder="Adicione informações ou dúvidas"></textarea>
+
+      <!-- Botão de envio -->
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <!-- JavaScript -->
+  <script type="module" src="./assets/js/script.js"></script>
+</body>
+</html>
